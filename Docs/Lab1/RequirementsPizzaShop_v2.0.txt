@@ -1,0 +1,23 @@
+03. PizzaShop
+Aplicatia permite plasarea si onorarea comenzilor de pizza dintr-un restaurant cu 8 mese, precum si plata
+(simulata) prin card sau cash. Informatiile referitoare la meniu sunt preluate dintr-un fisier text cu structura:
+<tip_pizza>(string), <pret>(double). La utilizarea aplicatiei se va permite:
+
+- Plasarea unei comenzi noi, precizand tipul de pizza din meniu si cantitatea comandata. O comanda poate
+sa contina mai multe tipuri de pizza.
+
+- Comanda este preluata de maestrul pizzar care o va pregati si va notifica chelnerul atunci cand pizza
+poate fi servita.
+
+- Chelnerul serveste pizza si incaseaza plata de la client. Clientul poate realiza plata cu cardul sau cash.
+
+F01. Pentru fiecare plata realizata se retin intr-un fisier text urmatoarele detalii: masa(int), tipul platii (enum - cash sau
+card) si valoarea achitata(double).
+-. O masa poate fi eliberata la cerere, doar dupa achitarea comenzii.
+- Bucataria unde se alfa maestrul pizzar se poate inchide doar daca nu mai exista clienti.
+- Restaurantul se poate inchide doar daca nu sunt clienti si bucataria este inchisa.
+
+F02. La inchiderea restaurantului se afiseaza totalul incasarilor realizate, pentru fiecare tip de plata.
+
+La deschiderea aplicatiei este afisat un meniu cu cele 8 mese disponibile. Alegand o masa este deschisa o fereastra noua care permite
+plasarea comenzilor. In fereastra principala se afla si un buton de Help, care ofera instructiuni cu privire la utilizarea aplicatiei.
