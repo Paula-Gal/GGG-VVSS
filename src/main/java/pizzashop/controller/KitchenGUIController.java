@@ -48,10 +48,14 @@ public class KitchenGUIController {
         //Controller for Cook Button
         cook.setOnAction(event -> {
             selectedOrder = kitchenOrdersList.getSelectionModel().getSelectedItem();
-            kitchenOrdersList.getItems().remove(selectedOrder);
-            kitchenOrdersList.getItems().add(selectedOrder.toString()
+            if(selectedOrder!=null) {
+                if(!selectedOrder.toString().contains("COOKING")){
+                    kitchenOrdersList.getItems().remove(selectedOrder);
+                    kitchenOrdersList.getItems().add(selectedOrder.toString()
                      .concat(" Cooking started at: ").toUpperCase()
                      .concat(now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE)));
+                }
+            }
         });
         //Controller for Ready Button
         ready.setOnAction(event -> {
