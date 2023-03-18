@@ -19,19 +19,14 @@ public class KitchenGUIController {
     public static  ObservableList<String> order = FXCollections.observableArrayList();
     private Object selectedOrder;
     private Calendar now = Calendar.getInstance();
-    private String extractedTableNumberString = new String();
+    private String extractedTableNumberString;
     private int extractedTableNumberInteger;
     //thread for adding data to kitchenOrderList
     public  Thread addOrders = new Thread(new Runnable() {
         @Override
         public void run() {
             while (true) {
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        kitchenOrdersList.setItems(order);
-                        }
-                });
+                Platform.runLater(() -> kitchenOrdersList.setItems(order));
                 try {
                     Thread.sleep(100);
                   } catch (InterruptedException ex) {
@@ -48,10 +43,14 @@ public class KitchenGUIController {
         //Controller for Cook Button
         cook.setOnAction(event -> {
             selectedOrder = kitchenOrdersList.getSelectionModel().getSelectedItem();
-            kitchenOrdersList.getItems().remove(selectedOrder);
-            kitchenOrdersList.getItems().add(selectedOrder.toString()
+            if(selectedOrder!=null) {
+                if(!selectedOrder.toString().contains("COOKING")){
+                    kitchenOrdersList.getItems().remove(selectedOrder);
+                    kitchenOrdersList.getItems().add(selectedOrder.toString()
                      .concat(" Cooking started at: ").toUpperCase()
                      .concat(now.get(Calendar.HOUR)+":"+now.get(Calendar.MINUTE)));
+                }
+            }
         });
         //Controller for Ready Button
         ready.setOnAction(event -> {
