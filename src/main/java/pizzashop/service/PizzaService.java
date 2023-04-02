@@ -24,7 +24,17 @@ public class PizzaService {
 
     public void addPayment(int table, PaymentType type, double amount){
         Payment payment= new Payment(table, type, amount);
+        //validatePayment(payment);
         payRepo.add(payment);
+    }
+
+    private void validatePayment(Payment payment){
+        if(payment.getTableNumber()<1 || payment.getTableNumber()>8){
+            throw new RuntimeException("Invalid table");
+        }
+        if(payment.getAmount()<=0){
+            throw new RuntimeException("Invalid amount");
+        }
     }
 
     public double getTotalAmount(PaymentType type){
