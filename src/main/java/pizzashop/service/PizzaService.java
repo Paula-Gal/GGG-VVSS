@@ -24,7 +24,7 @@ public class PizzaService {
 
     public void addPayment(int table, PaymentType type, double amount){
         Payment payment= new Payment(table, type, amount);
-        //validatePayment(payment);
+        validatePayment(payment);
         payRepo.add(payment);
     }
 
