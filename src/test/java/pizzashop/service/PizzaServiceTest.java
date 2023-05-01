@@ -101,10 +101,8 @@ class PizzaServiceTest {
 //        assertEquals("Invalid table", ex2.getMessage());
 //    }
 
-    ////LABORATORUL 3
-
     @Test
-    void whenNoPayments_expectAmount0(){ //F02_P01
+    void whenNoPayments_expectAmount0(){
         when(paymentRepository.getAll()).thenReturn(List.of());
 
         double amount = pizzaService.getTotalAmount(PaymentType.Card);
@@ -113,7 +111,16 @@ class PizzaServiceTest {
     }
 
     @Test
-    void whenNoCardPayments_expectAmount0forGetTotalForCard(){ //F02_P03
+    void whenPaymentListNull_expectAmount0(){
+        when(paymentRepository.getAll()).thenReturn(null);
+
+        double amount = pizzaService.getTotalAmount(PaymentType.Card);
+
+        assertEquals(0.0d,amount);
+    }
+
+    @Test
+    void whenNoCardPayments_expectAmount0forGetTotalForCard(){
         when(paymentRepository.getAll()).thenReturn(List.of(new Payment(1,PaymentType.Cash,10)));
 
         double amount = pizzaService.getTotalAmount(PaymentType.Card);
@@ -122,13 +129,11 @@ class PizzaServiceTest {
     }
 
     @Test
-    void whenCardPayments_expectAmount0forGetTotalForCard(){ //F02_P04
+    void whenCardPayments_expectAmount0forGetTotalForCard(){
         when(paymentRepository.getAll()).thenReturn(List.of(new Payment(1,PaymentType.Cash,10),new Payment(1,PaymentType.Card,15)));
 
         double amount = pizzaService.getTotalAmount(PaymentType.Cash);
 
         assertEquals(10d,amount);
     }
-
-    //In pathul 2 (F02_P02) nu intra niciodata
 }
