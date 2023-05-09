@@ -17,6 +17,12 @@ public class PaymentRepository {
         readPayments();
     }
 
+    public PaymentRepository(String filename){
+        this.filename = filename;
+        this.paymentList = new ArrayList<>();
+        readPayments();
+    }
+
     private void readPayments(){
         File file = new File(filename);
 
@@ -60,7 +66,7 @@ public class PaymentRepository {
         BufferedWriter bw = null;
         try {
             bw = new BufferedWriter(new FileWriter(file));
-            for (Payment p:paymentList) {
+            for (Payment p:getAll()) {
                 System.out.println(p.toString());
                 bw.write(p.toString());
                 bw.newLine();
