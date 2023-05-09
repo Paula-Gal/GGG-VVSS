@@ -21,36 +21,36 @@
 <h1 class='doclevel'>1.Test Suite : gpir2928_IntT</h1>
 <a name="toc_tc19398"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 233-82: InT_Step1&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">gpir2928</td></tr>
-<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Step 1.testare unitarăpentru E, R şiS;</p>
-
-<p>&nbsp;</p>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Step 1. Se testeaza adaugarea unui payment cu succes in repo.</p>
 </td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.repository.PaymentRepositoryTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.IntegrationTest#testAdd</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">gpir2928_F01:  SavePayment [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
 </div>
 <a name="toc_tc19400"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 233-83: InT_Step2&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">gpir2928</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Step 2. Se testeaza adaugarea unui payment in repo, cu Payment mock-uit.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.IntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.IntegrationTest#getPaymentsTest_PaymentMocked</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">gpir2928_F01:  SavePayment [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>
 </div>
 <a name="toc_tc19402"></a><p>&nbsp;</p><div> <table class="tc" width="90%" ><tr><th colspan="4">Test Case 233-84: InT_Step3&nbsp;<span style="font-size: 80%;">[Version  : 1]</span></th></tr>
 <tr><td width="20%" valign="top"><span class="label">Author:</span></td><td colspan="3">gpir2928</td></tr>
-<tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
+<tr><td colspan="4"><span class="label">Summary:</span><br /><p>Step 3. Se testeaza ca suma totala a platilor de tip card este returnata corect.</p>
+</td></tr><tr><td width="20%" valign="top"><span class="label">Execution type:</span></td><td colspan="3">Manual</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Estimated exec. duration (min):</span></td><td colspan="3"></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Importance:</span></td><td colspan="3">Medium</td></tr>
-<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" ></td></tr>
-<tr><td > name of the test method:</td><td  colspan = "3" ></td></tr>
+<tr><td colspan="4"></td></tr><tr><td > name of the autotest class:</td><td  colspan = "3" >pizzashop.IntegrationTest</td></tr>
+<tr><td > name of the test method:</td><td  colspan = "3" >pizzashop.IntegrationTest#getTotalAmountTest</td></tr>
 <tr><td width="20%" valign="top"><span class="label">Requirements</span><td colspan="3">gpir2928_F01:  SavePayment [Version : 1]<br /></td></tr>
 <tr><td width="20%" valign="top"><span class="label">Keywords:</span></td><td colspan="3">&nbsp;None<br/></td></tr>
 </table>

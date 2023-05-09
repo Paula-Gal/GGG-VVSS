@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PaymentRepositoryTest {
+public class PaymentRepositoryTest {
     @AfterEach
     public void afterEach() throws IOException {
         new FileWriter("src/test/resources/data/payments.txt", false).close();

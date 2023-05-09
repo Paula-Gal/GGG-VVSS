@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class PaymentTest {
+public class PaymentTest {
     @Test
-    void constructorAndGetterTest(){
+    public void constructorAndGetterTest(){
         Payment payment = new Payment(1,PaymentType.Card,10d);
 
         assertEquals(1,payment.getTableNumber());
@@ -15,7 +15,7 @@ class PaymentTest {
     }
 
     @Test
-    void setterTest(){
+    public void setterTest(){
         Payment payment = new Payment(1,PaymentType.Card,10d);
         payment.setTableNumber(2);
         payment.setType(PaymentType.Cash);

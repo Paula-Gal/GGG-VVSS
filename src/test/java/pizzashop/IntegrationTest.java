@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-class IntegrationTest {
+public class IntegrationTest {
     @AfterEach
     public void afterEach() throws IOException {
         new FileWriter("src/test/resources/data/payments.txt", false).close();
