@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
 
 public class PaymentRepositoryTest {
     @AfterEach
@@ -34,8 +35,12 @@ public class PaymentRepositoryTest {
     public void testWriteAll() throws IOException {
         PaymentRepository repository = Mockito.spy(new PaymentRepository("src/test/resources/data/payments.txt"));
         List<Payment> paymentList = new ArrayList<>();
-        Payment payment1 = new Payment(1, PaymentType.Cash, 10.0);
-        Payment payment2 = new Payment(2, PaymentType.Card, 20.0);
+
+        Payment payment1 = Mockito.mock(Payment.class);
+        Payment payment2 = Mockito.mock(Payment.class);
+        when(payment1.toString()).thenReturn("1,Cash,10.0");
+        when(payment2.toString()).thenReturn("2,Card,20.0");
+
         paymentList.add(payment1);
         paymentList.add(payment2);
         Mockito.doReturn(paymentList).when(repository).getAll();
